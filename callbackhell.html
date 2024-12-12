@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function placeorder (callback){
+         setTimeout (()=>{
+            console.log("placeorder");
+            callback()
+         },0)
+
+        }
+
+        function preparing (callback){
+         setTimeout (()=>{
+            console.log("preparing");
+            callback()
+         },3000)
+
+        }
+
+
+
+        function Baking (callback){
+         setTimeout (()=>{
+            console.log("Baking");
+            callback()
+         },5000)
+
+        }
+
+
+
+        function packking (callback){
+         setTimeout (()=>{
+            console.log("packking");
+            callback()
+         },7000)
+
+        }
+
+
+        function deliveringpizza (){
+         setTimeout (()=>{
+            console.log("deliveringpizza");
+            
+         },1000)
+
+        }
+
+        placeorder(()=>{
+            preparing(()=>{
+                Baking(()=>{
+                    packking(()=>{
+                        deliveringpizza()
+                    })
+                })
+            })
+        })
+           </script>
+</body>
+</html>
